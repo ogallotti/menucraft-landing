@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hero Before/After Slider
     const slider = document.getElementById('hero-slider');
     if (slider) {
-        const afterImage = slider.querySelector('.comparison-slider__image--after');
+        const beforeImage = slider.querySelector('.comparison-slider__image--before');
         const handle = slider.querySelector('.comparison-slider__handle');
         let isDragging = false;
 
@@ -58,7 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Clamp percentage between 0 and 100
             percentage = Math.max(0, Math.min(100, percentage));
 
-            afterImage.style.width = `${percentage}%`;
+            // Update clip-path to reveal/hide the top image (Before)
+            // inset(0 right bottom left) -> inset(0 (100-percentage)% 0 0)
+            // If percentage is 0 (handle at left), we clip 100% from right -> Image hidden?
+            // Wait, if handle is at left, we want to see AFTER image (which is bottom).
+            // So Before image (top) should be fully clipped.
+            // inset(0 100% 0 0) -> Clips everything. Correct.
+            // If percentage is 100 (handle at right), we clip 0% from right -> Image fully visible.
+            beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
             handle.style.left = `${percentage}%`;
         };
 

@@ -432,15 +432,26 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  /* Remove background properties as we use img tags now */
+}
+
+.comparison-slider__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
 }
 
 .comparison-slider__image--before {
   z-index: 2;
-  border-right: 2px solid #fff;
-  overflow: hidden;
-  width: 30%; /* Initial state */
+  /* Initial state: 50% revealed */
+  clip-path: inset(0 50% 0 0);
+}
+
+.comparison-slider__image--after {
+  z-index: 1;
 }
 
 .comparison-slider__handle {
@@ -454,7 +465,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 30%; /* Initial state */
+  left: 50%; /* Initial state */
 }
 
 .comparison-slider__button {
