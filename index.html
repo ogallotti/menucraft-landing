@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuCraft - Cardápios que vendem</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <span style="font-weight: 700; font-size: 20px; color: var(--color-blue-dark);">MenuCraft</span>
+            </div>
+
+            <nav class="header__nav desktop-only">
+                <a href="#como-funciona" class="header__link">Como Funciona</a>
+                <a href="#resultados" class="header__link">Resultados</a>
+                <a href="#precos" class="header__link">Preços</a>
+                <a href="#faq" class="header__link">FAQ</a>
+            </nav>
+
+            <div class="header__cta desktop-only">
+                <button class="btn btn--sm btn--primary">Começar Agora</button>
+            </div>
+
+            <button class="header__toggle mobile-only" id="mobile-menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <div class="header__mobile-menu" id="mobile-menu">
+                <nav class="header__mobile-nav">
+                    <a href="#como-funciona" class="header__mobile-link">Como Funciona</a>
+                    <a href="#resultados" class="header__mobile-link">Resultados</a>
+                    <a href="#precos" class="header__mobile-link">Preços</a>
+                    <a href="#faq" class="header__mobile-link">FAQ</a>
+                    <div style="margin-top: 24px;">
+                        <button class="btn btn--md btn--primary" style="width: 100%;">Começar Agora</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content" data-aos="fade-right">
+                    <span class="badge badge--default hero__badge">🚀 MAIS DE 500 RESTAURANTES JÁ TRANSFORMARAM SEUS CARDÁPIOS</span>
+                    
+                    <h1 class="hero__title">
+                        Seu cardápio vende<br>
+                        ou só ocupa espaço?
+                    </h1>
+                    
+                    <p class="hero__subtitle">
+                        Transforme fotos amadoras em imagens profissionais que fazem
+                        o cliente parar de rolar e começar a pedir. Sem fotógrafo,
+                        sem espera, sem complicação.
+                    </p>
+                    
+                    <div class="hero__actions">
+                        <button class="btn btn--md btn--primary">
+                            Transformar Meu Cardápio <i data-lucide="arrow-right" style="margin-left: 8px;"></i>
+                        </button>
+                        <button class="btn btn--md btn--ghost">
+                            <i data-lucide="play" style="margin-right: 8px;"></i> Ver Demonstração
+                        </button>
+                    </div>
+
+                    <div class="hero__social-proof">
+                        <div class="hero__avatars">
+                            <div class="hero__avatar-placeholder"></div>
+                            <div class="hero__avatar-placeholder"></div>
+                            <div class="hero__avatar-placeholder"></div>
+                            <div class="hero__avatar-placeholder"></div>
+                            <div class="hero__avatar-placeholder"></div>
+                        </div>
+                        <div class="hero__rating">
+                            <div class="hero__stars">⭐⭐⭐⭐⭐</div>
+                            <span>4.9/5 de satisfação</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual" data-aos="fade-left">
+                    <div class="comparison-slider" id="hero-slider">
+                        <div class="comparison-slider__image comparison-slider__image--after">
+                            <div class="placeholder-image after">DEPOIS</div>
+                        </div>
+                        <div class="comparison-slider__image comparison-slider__image--before">
+                            <div class="placeholder-image before">ANTES</div>
+                        </div>
+                        <div class="comparison-slider__handle">
+                            <div class="comparison-slider__line"></div>
+                            <div class="comparison-slider__button">
+                                <i data-lucide="move-horizontal"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LogoBar -->
+        <section class="logo-bar">
+            <div class="container">
+                <p class="logo-bar__text">RESTAURANTES DE TODOS OS TAMANHOS JÁ TRANSFORMARAM SEUS CARDÁPIOS</p>
+                <div class="logo-bar__marquee">
+                    <div class="logo-bar__track">
+                        <!-- Loop of images -->
+                        <div class="logo-bar__item"><img src="assets/images/CM-B1.jpg" alt="Restaurant 1"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B2.jpg" alt="Restaurant 2"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B3.jpg" alt="Restaurant 3"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B4.jpg" alt="Restaurant 4"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B5.jpg" alt="Restaurant 5"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B6.jpg" alt="Restaurant 6"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B7.jpg" alt="Restaurant 7"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-P1.jpg" alt="Restaurant 8"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-P2.jpg" alt="Restaurant 9"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-P3.jpg" alt="Restaurant 10"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-P4.jpg" alt="Restaurant 11"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-P5.jpg" alt="Restaurant 12"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-P6.jpg" alt="Restaurant 13"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-P7.jpg" alt="Restaurant 14"></div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="logo-bar__item"><img src="assets/images/CM-B1.jpg" alt="Restaurant 1"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B2.jpg" alt="Restaurant 2"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B3.jpg" alt="Restaurant 3"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B4.jpg" alt="Restaurant 4"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B5.jpg" alt="Restaurant 5"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B6.jpg" alt="Restaurant 6"></div>
+                        <div class="logo-bar__item"><img src="assets/images/CM-B7.jpg" alt="Restaurant 7"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ProblemSolution -->
+        <section class="problem-solution">
+            <div class="container">
+                <h2 class="problem-solution__title" data-aos="fade-up">
+                    A diferença entre "só olhar"<br>
+                    e "adicionar ao carrinho"
+                </h2>
+
+                <div class="problem-solution__grid">
+                    <!-- Problem Card -->
+                    <div class="card problem-card">
+                        <div class="card-header">
+                            <span class="icon-circle icon-circle--red">
+                                <i data-lucide="x"></i>
+                            </span>
+                            <h3>Cardápio Comum</h3>
+                        </div>
+                        <ul class="feature-list">
+                            <li><i data-lucide="x" class="text-red" style="width: 16px;"></i> <span>Fotos escuras tiradas com celular</span></li>
+                            <li><i data-lucide="x" class="text-red" style="width: 16px;"></i> <span>Descrições genéricas que não vendem</span></li>
+                            <li><i data-lucide="x" class="text-red" style="width: 16px;"></i> <span>Cliente passa reto sem parar</span></li>
+                            <li><i data-lucide="x" class="text-red" style="width: 16px;"></i> <span>Você perde para a concorrência</span></li>
+                            <li><i data-lucide="x" class="text-red" style="width: 16px;"></i> <span>Ticket médio baixo</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="problem-solution__arrow">
+                        <i data-lucide="arrow-right" style="width: 48px; height: 48px;"></i>
+                    </div>
+
+                    <!-- Solution Card -->
+                    <div class="card solution-card">
+                        <div class="card-header">
+                            <span class="icon-circle icon-circle--green">
+                                <i data-lucide="check"></i>
+                            </span>
+                            <h3>Cardápio MenuCraft</h3>
+                        </div>
+                        <ul class="feature-list">
+                            <li><i data-lucide="check" class="text-green" style="width: 16px;"></i> <span>Fotos profissionais que dão água na boca</span></li>
+                            <li><i data-lucide="check" class="text-green" style="width: 16px;"></i> <span>Descrições que despertam desejo</span></li>
+                            <li><i data-lucide="check" class="text-green" style="width: 16px;"></i> <span>Cliente para, olha e pede</span></li>
+                            <li><i data-lucide="check" class="text-green" style="width: 16px;"></i> <span>Você se destaca da concorrência</span></li>
+                            <li><i data-lucide="check" class="text-green" style="width: 16px;"></i> <span>Aumento no ticket médio</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HowItWorks -->
+        <section id="como-funciona" class="how-it-works">
+            <div class="container">
+                <div class="text-center mb-64">
+                    <span class="badge badge--default mb-24">SIMPLES ASSIM</span>
+                    <h2 class="section-title">
+                        3 passos para um cardápio<br>
+                        que vende sozinho
+                    </h2>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i data-lucide="link" style="width: 48px; height: 48px;"></i>
+                        </div>
+                        <h4 class="step-title">Cole a URL do seu restaurante</h4>
+                        <p class="step-desc">
+                            Basta colar o link do seu restaurante no iFood.
+                            Nós fazemos o resto.
+                        </p>
+                    </div>
+
+                    <!-- Connector 1-2 -->
+                    <div class="step-connector desktop-only">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i data-lucide="wand-2" style="width: 48px; height: 48px;"></i>
+                        </div>
+                        <h4 class="step-title">A mágica acontece</h4>
+                        <p class="step-desc">
+                            Nossa tecnologia analisa cada item e cria fotos
+                            profissionais e descrições que vendem.
+                        </p>
+                    </div>
+
+                    <!-- Connector 2-3 -->
+                    <div class="step-connector desktop-only">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i data-lucide="trending-up" style="width: 48px; height: 48px;"></i>
+                        </div>
+                        <h4 class="step-title">Veja suas vendas crescerem</h4>
+                        <p class="step-desc">
+                            Baixe seu novo cardápio e veja a diferença
+                            no número de pedidos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-48">
+                    <button class="btn btn--lg btn--primary">Começar Agora — É Grátis Testar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformations -->
+        <section id="resultados" class="transformations">
+            <div class="container">
+                <div class="text-center mb-64">
+                    <span class="badge badge--default mb-24">RESULTADOS REAIS</span>
+                    <h2 class="section-title">Veja a transformação com seus próprios olhos</h2>
+                    <p class="section-subtitle">Exemplos reais de cardápios transformados pelo MenuCraft</p>
+                </div>
+
+                <div class="transformations__grid">
+                    <!-- Item 1 -->
+                    <div class="transformation-card" data-aos="zoom-in" data-aos-delay="0">
+                        <div class="transformation-card__header">
+                            <span class="badge badge--highlight">Açaí & Smoothies</span>
+                        </div>
+                        <div class="transformation-card__images">
+                            <div class="image-box before">
+                                <span class="image-label">ANTES</span>
+                                <img src="assets/images/acai-before.jpg" alt="Açaí Antes" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="image-box after">
+                                <span class="image-label">DEPOIS</span>
+                                <img src="assets/images/acai-after.png" alt="Açaí Depois" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="transformation-card__content">
+                            <div class="desc-block">
+                                <p class="desc-text original">"Açaí 500ml"</p>
+                                <div class="desc-arrow">↓</div>
+                                <p class="desc-text optimized">"Açaí cremoso batido na hora com banana, granola crocante e leite condensado. Servido bem gelado. 500ml."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="transformation-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="transformation-card__header">
+                            <span class="badge badge--highlight">Hambúrgueres</span>
+                        </div>
+                        <div class="transformation-card__images">
+                            <div class="image-box before">
+                                <span class="image-label">ANTES</span>
+                                <div class="placeholder-content">Burger Amador</div>
+                            </div>
+                            <div class="image-box after">
+                                <span class="image-label">DEPOIS</span>
+                                <div class="placeholder-content">Burger Pro</div>
+                            </div>
+                        </div>
+                        <div class="transformation-card__content">
+                            <div class="desc-block">
+                                <p class="desc-text original">"X-Tudo especial"</p>
+                                <div class="desc-arrow">↓</div>
+                                <p class="desc-text optimized">"Pão brioche selado na chapa, hambúrguer 180g, queijo cheddar derretido, bacon crocante, ovo, alface americana e molho especial da casa."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="transformation-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="transformation-card__header">
+                            <span class="badge badge--highlight">Pizzas</span>
+                        </div>
+                        <div class="transformation-card__images">
+                            <div class="image-box before">
+                                <span class="image-label">ANTES</span>
+                                <div class="placeholder-content">Pizza Amadora</div>
+                            </div>
+                            <div class="image-box after">
+                                <span class="image-label">DEPOIS</span>
+                                <div class="placeholder-content">Pizza Pro</div>
+                            </div>
+                        </div>
+                        <div class="transformation-card__content">
+                            <div class="desc-block">
+                                <p class="desc-text original">"Pizza Calabresa"</p>
+                                <div class="desc-arrow">↓</div>
+                                <p class="desc-text optimized">"Calabresa artesanal fatiada, cebola roxa caramelizada, azeitonas pretas e orégano fresco. Borda tradicional crocante."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="transformation-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="transformation-card__header">
+                            <span class="badge badge--highlight">Pratos Executivos</span>
+                        </div>
+                        <div class="transformation-card__images">
+                            <div class="image-box before">
+                                <span class="image-label">ANTES</span>
+                                <div class="placeholder-content">Marmita Amadora</div>
+                            </div>
+                            <div class="image-box after">
+                                <span class="image-label">DEPOIS</span>
+                                <div class="placeholder-content">Marmita Pro</div>
+                            </div>
+                        </div>
+                        <div class="transformation-card__content">
+                            <div class="desc-block">
+                                <p class="desc-text original">"Prato do dia"</p>
+                                <div class="desc-arrow">↓</div>
+                                <p class="desc-text optimized">"Frango grelhado suculento, arroz soltinho, feijão temperado, farofa crocante e salada fresca. Porção generosa de 450g."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SocialProof -->
+        <section class="social-proof">
+            <div class="container">
+                <div class="text-center mb-64">
+                    <span class="badge badge--default social-proof__badge">QUEM USA, RECOMENDA</span>
+                    <h2 class="social-proof__title">Mais de 500 restaurantes já aumentaram suas vendas</h2>
+                </div>
+
+                <div class="testimonials-carousel">
+                    <button class="carousel-btn prev" id="prev-btn"><i data-lucide="chevron-left"></i></button>
+                    
+                    <div class="carousel-track-container">
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial-card">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"Minhas vendas aumentaram 40% no primeiro mês. As fotos ficaram tão boas que os clientes comentam nos pedidos."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/CM-P1.jpg" alt="Ricardo Mendes" class="author-avatar">
+                                    <div class="author-info">
+                                        <strong>Ricardo Mendes</strong>
+                                        <span>Açaí do Rica</span>
+                                        <small>São Paulo, SP</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="testimonial-card">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"Eu gastava R$2.000 com fotógrafo e demorava semanas. Com o MenuCraft, resolvi em 10 minutos por menos de R$200."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/CM-P2.jpg" alt="Juliana Costa" class="author-avatar">
+                                    <div class="author-info">
+                                        <strong>Juliana Costa</strong>
+                                        <span>Sabor & Arte Marmitaria</span>
+                                        <small>Belo Horizonte, MG</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="testimonial-card">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"O cardápio novo é outro nível. Meus concorrentes perguntam qual fotógrafo eu contratei."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/CM-P3.jpg" alt="Fernando Oliveira" class="author-avatar">
+                                    <div class="author-info">
+                                        <strong>Fernando Oliveira</strong>
+                                        <span>Burger House</span>
+                                        <small>Curitiba, PR</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 4 -->
+                            <div class="testimonial-card">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"Fácil de usar, resultado profissional. O investimento se pagou na primeira semana."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/CM-P4.jpg" alt="Amanda Santos" class="author-avatar">
+                                    <div class="author-info">
+                                        <strong>Amanda Santos</strong>
+                                        <span>Sushi Express</span>
+                                        <small>Rio de Janeiro, RJ</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 5 -->
+                            <div class="testimonial-card">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"Mudou completamente a percepção dos clientes sobre meu restaurante. Parece que inaugurei um lugar novo."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/CM-P5.jpg" alt="Carlos Eduardo" class="author-avatar">
+                                    <div class="author-info">
+                                        <strong>Carlos Eduardo</strong>
+                                        <span>Pizzaria Bella Napoli</span>
+                                        <small>Porto Alegre, RS</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn next" id="next-btn"><i data-lucide="chevron-right"></i></button>
+                </div>
+
+                <div class="carousel-dots" id="carousel-dots">
+                    <!-- Dots will be generated by JS -->
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-value">+500</div>
+                        <div class="metric-label">Restaurantes Atendidos</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Aumento médio em vendas</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">4.9/5</div>
+                        <div class="metric-label">Satisfação dos Clientes</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="precos" class="pricing">
+            <div class="container">
+                <div class="text-center mb-64">
+                    <span class="badge badge--default mb-24">PREÇOS SIMPLES</span>
+                    <h2 class="section-title">
+                        Invista menos que uma sessão de fotos.<br>
+                        Ganhe um cardápio completo.
+                    </h2>
+                    <p class="section-subtitle">
+                        Sistema de créditos flexível. Use quando quiser, sem mensalidade.
+                    </p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Starter -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Starter</h3>
+                            <div class="plan-credits">100 créditos</div>
+                            <div class="plan-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">97</span>
+                            </div>
+                            <div class="price-per-credit">R$ 0,97 por crédito</div>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 10 gerações de imagem</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 10 descrições otimizadas</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Download em alta qualidade</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Suporte por email</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <button class="btn btn--secondary" style="width: 100%;">Escolher Pacote</button>
+                            <p class="ideal-for">Ideal para: Cardápios com até 10 itens</p>
+                        </div>
+                    </div>
+
+                    <!-- Básico -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="badge badge--economy economy-badge">32% OFF</span>
+                            <h3 class="plan-name">Básico</h3>
+                            <div class="plan-credits">300 créditos</div>
+                            <div class="plan-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">197</span>
+                            </div>
+                            <div class="price-per-credit">R$ 0,66 por crédito</div>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 30 gerações de imagem</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 30 descrições otimizadas</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Download em alta qualidade</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Suporte prioritário</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Regenerações ilimitadas</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <button class="btn btn--secondary" style="width: 100%;">Escolher Pacote</button>
+                            <p class="ideal-for">Ideal para: Cardápios médios</p>
+                        </div>
+                    </div>
+
+                    <!-- Popular -->
+                    <div class="pricing-card highlight">
+                        <div class="popular-badge">MAIS ESCOLHIDO</div>
+                        <div class="pricing-header">
+                            <span class="badge badge--economy economy-badge">41% OFF</span>
+                            <h3 class="plan-name">Popular</h3>
+                            <div class="plan-credits">700 créditos</div>
+                            <div class="plan-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">397</span>
+                            </div>
+                            <div class="price-per-credit">R$ 0,57 por crédito</div>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 70 gerações de imagem</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 70 descrições otimizadas</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Download em alta qualidade</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Suporte prioritário</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Regenerações ilimitadas</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Acesso antecipado a novidades</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <button class="btn btn--primary" style="width: 100%;">Escolher Pacote</button>
+                            <p class="ideal-for">Ideal para: Cardápios completos</p>
+                        </div>
+                    </div>
+
+                    <!-- Pro -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="badge badge--economy economy-badge">53% OFF</span>
+                            <h3 class="plan-name">Pro</h3>
+                            <div class="plan-credits">1500 créditos</div>
+                            <div class="plan-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">697</span>
+                            </div>
+                            <div class="price-per-credit">R$ 0,46 por crédito</div>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 150 gerações de imagem</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> 150 descrições otimizadas</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Download em alta qualidade</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Suporte VIP (WhatsApp)</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Regenerações ilimitadas</li>
+                            <li><i data-lucide="check" class="feature-icon" style="width: 16px;"></i> Consultoria de cardápio</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <button class="btn btn--secondary" style="width: 100%;">Escolher Pacote</button>
+                            <p class="ideal-for">Ideal para: Redes e múltiplos cardápios</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guarantee-box">
+                    <div class="guarantee-icon">🛡️</div>
+                    <div class="guarantee-content">
+                        <h4>GARANTIA DE 7 DIAS</h4>
+                        <p>Não gostou do resultado? Devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title text-center mb-48">Perguntas Frequentes</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Preciso saber mexer em tecnologia para usar?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Não. Se você sabe copiar e colar um link, você sabe usar o MenuCraft. É só colar a URL do seu restaurante no iFood e nós fazemos todo o trabalho pesado. Em menos de 10 minutos você tem um cardápio profissional pronto.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>As fotos são editadas ou criadas do zero?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>As fotos são recriações completas. Nossa tecnologia analisa seu prato original e cria uma nova imagem profissional, mantendo as características reais (tipo de embalagem, ingredientes visíveis, porção), mas com iluminação, ângulo e apresentação de nível profissional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>E se o resultado não ficar parecido com meu prato real?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Preservamos fielmente a essência do seu prato. Se você serve açaí em copo plástico, a foto mostrará um copo plástico — mas com apresentação profissional. Nunca vamos mostrar algo que o cliente não vai receber. E se não gostar, você pode regenerar quantas vezes quiser.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Os créditos expiram?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Seus créditos têm validade de 12 meses a partir da compra. Tempo de sobra para transformar todo seu cardápio e ainda fazer atualizações sazonais.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Posso usar as fotos onde eu quiser?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! As imagens geradas são 100% suas. Use no iFood, Instagram, cardápio impresso, fachada, onde quiser. Sem restrições.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>E se eu não gostar do resultado?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Você tem direito a regenerações ilimitadas (nos pacotes Básico, Popular e Pro). E ainda oferecemos garantia de 7 dias: se não ficar satisfeito, devolvemos seu dinheiro integralmente, sem perguntas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Quanto tempo leva para ficar pronto?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cada imagem leva cerca de 30 segundos para ser gerada. Um cardápio completo com 30 itens fica pronto em menos de 15 minutos.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Funciona para qualquer tipo de comida?</h4>
+                            <span class="faq-icon"><i data-lucide="plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Açaí, hambúrguer, pizza, sushi, marmita, sobremesas, bebidas... Nossa tecnologia foi treinada com milhares de pratos brasileiros de todas as categorias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container text-center">
+                <h2 class="final-cta__title">
+                    Pronto para ter um cardápio<br>
+                    que vende de verdade?
+                </h2>
+                <p class="final-cta__subtitle">
+                    Junte-se a mais de 500 restaurantes que já transformaram
+                    suas vendas com o MenuCraft.
+                </p>
+                <button class="btn btn--lg btn-white">Começar Minha Transformação</button>
+                <p class="final-cta__security">
+                    🔒 Pagamento seguro · 🛡️ Garantia de 7 dias · ⚡ Resultado em minutos
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Logo Column -->
+                <div class="footer__col">
+                    <div class="footer__logo">MenuCraft</div>
+                    <p class="footer__tagline">Cardápios que convertem curiosos em clientes.</p>
+                </div>
+
+                <!-- Product Links -->
+                <div class="footer__col">
+                    <h4>Produto</h4>
+                    <ul class="footer__links">
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#resultados">Resultados</a></li>
+                        <li><a href="#precos">Preços</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="footer__col">
+                    <h4>Legal</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer__col">
+                    <h4>Redes Sociais</h4>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="youtube"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                © 2024 MenuCraft. Todos os direitos reservados.<br>
+                CNPJ: XX.XXX.XXX/0001-XX
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
